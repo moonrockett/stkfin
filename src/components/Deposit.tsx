@@ -21,7 +21,7 @@ function Deposit() {
       <h2 className="text-xl font-bold">DEPOSIT BNB</h2>
 
       <div className="space-y-3">
-        <p>Send your BNB to the following address:</p>
+        <p>Send your BNB to the following address and send a screenshot the transaction to the telegram bot admin:</p>
         <div className="brutalist-border bg-white p-2 break-all font-mono text-sm">
           {WALLET_ADDRESS}
         </div>
