@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-accent: #ef4444;
+  --color-accent-hover: #dc2626;
+  --color-background: #f0f0f0;
+  --color-border: #000000;
+  --border-radius: 1rem;
+  --border-width: 2px;
+  --shadow-offset: 6px;
+  --shadow-color: #000000;
+}
+
+body {
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+  font-family: monospace;
+  background: var(--color-background);
+}
+
+button {
+  user-select: none;
+  transition: none !important;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.brutalist-shadow {
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+}
+
+.brutalist-border {
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+  @apply brutalist-shadow;
+}
+
+.accent-button {
+  background-color: var(--color-accent);
+}
+
+.accent-button:hover {
+  background-color: var(--color-accent-hover);
+}
