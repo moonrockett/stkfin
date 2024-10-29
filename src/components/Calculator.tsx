@@ -48,10 +48,10 @@ function Calculator() {
             <button
               key={preset}
               onClick={() => setAmount(preset)}
-              className={`brutalist-border p-2 hover:bg-gray-50 ${
+              className={`brutalist-border p-2 ${
                 amount === preset 
-                  ? 'accent-button text-white hover:bg-[var(--color-accent-hover)]' 
-                  : 'bg-white text-black'
+                  ? 'accent-button text-white !bg-[var(--color-accent)] hover:!bg-[var(--color-accent-hover)]' 
+                  : 'bg-white text-black hover:bg-gray-50'
               }`}
             >
               {preset} BNB
@@ -64,7 +64,9 @@ function Calculator() {
         <button
           onClick={() => setSelectedCurrency('BNB')}
           className={`flex-1 p-2 brutalist-border ${
-            selectedCurrency === 'BNB' ? 'accent-button text-white' : 'bg-white'
+            selectedCurrency === 'BNB' 
+              ? 'accent-button text-white !bg-[var(--color-accent)] hover:!bg-[var(--color-accent-hover)]' 
+              : 'bg-white text-black hover:bg-gray-50'
           }`}
         >
           BNB
@@ -72,7 +74,9 @@ function Calculator() {
         <button
           onClick={() => setSelectedCurrency('USD')}
           className={`flex-1 p-2 brutalist-border ${
-            selectedCurrency === 'USD' ? 'accent-button text-white' : 'bg-white'
+            selectedCurrency === 'USD' 
+              ? 'accent-button text-white !bg-[var(--color-accent)] hover:!bg-[var(--color-accent-hover)]' 
+              : 'bg-white text-black hover:bg-gray-50'
           }`}
         >
           USD
